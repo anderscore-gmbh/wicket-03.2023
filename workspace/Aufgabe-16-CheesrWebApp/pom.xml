@@ -45,7 +45,7 @@
 		<!--		Wicket 9 & JUnit 5-->
 		<junit.version>5.6.2</junit.version>
 <!--		Wicket 8 & Junit 4-->
-<!--		<junit.version>4.13.2</junit.version>-->
+<!--		<junit.version>4.13.2</junit.version> -->
 		<junit.platform.version>1.6.0</junit.platform.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
