@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>Wicket Training: Cheesr - Cheese Online</title>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#" >Cheesr - Cheese Online (Musterlösung 18)</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+	<wicket:extend>
+		<div class="col-md-6">
+			<div wicket:id="cart"></div>
+		</div>
+		<div class="col-md-6">
+			<div wicket:id="feedback">Feedback</div>
+
+			<form wicket:id="form">
+				<h2>Zur Kasse gehen</h2>
+				<p>Bitte geben Sie die Lieferadresse an</p>
+
+				<div class="form-group">
+					<label for="name">Name</label> <input wicket:id="name" name="name"
+						type="text" class="form-control" placeholder="name" />
+				</div>
+				<div class="form-group">
+					<label for="street">Straße</label> <input wicket:id="street"
+						name="street" type="text" class="form-control"
+						placeholder="Straße" />
+				</div>
+
+				<div class="form-group">
+					<label for="city">Stadt</label> <input wicket:id="city" name="city"
+						type="text" class="form-control" placeholder="Stadt" />
+				</div>
+				<div class="form-group">
+					<label for="zipcode">Postleitzahl</label> <input wicket:id="zipcode"
+						name="zipcode" type="text" class="form-control"
+						placeholder="Postleitzahl" />
+				</div>
+
+				<input wicket:id="cancel" type="button" value="Cancel" /> <input
+					wicket:id="order" type="submit" value="Order!" />
+			</form>
+
+		</div>
+	</wicket:extend>
+
+	</div>
+	<!-- /.container -->
+
+
+</body>
+</html>

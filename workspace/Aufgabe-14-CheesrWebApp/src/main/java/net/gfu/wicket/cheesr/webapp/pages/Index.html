@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>Wicket Training: Cheesr - Cheese Online</title>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#" >Cheesr - Cheese Online (Musterlösung 14)</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="col-md-6">
+			<h2>Our Selection</h2>
+			<div wicket:id="cheeses" class="cheese">
+				<h3 wicket:id="name">Gouda</h3>
+				<p wicket:id="description">Gouda is a Dutch...</p>
+				<p>
+					<span wicket:id="price">$1.99</span> <a wicket:id="add" href="#">add to cart</a>
+				</p>
+			</div>
+<wicket:remove>
+			<div class="cheese">
+				<h3>Emmental</h3>
+				<p>Emmental is a Swiss che...</p>
+				<p>
+					<span>$2.99</span> <a href="#">add to cart</a>
+				</p>
+			</div>
+</wicket:remove>
+		</div>
+
+		<div class="col-md-6">
+		<div wicket:id="cart"></div>
+			<input wicket:id="checkout" type="button" value="Check out"></input>
+		</div>
+	</div>
+	<!-- /.container -->
+</body>
+</html>

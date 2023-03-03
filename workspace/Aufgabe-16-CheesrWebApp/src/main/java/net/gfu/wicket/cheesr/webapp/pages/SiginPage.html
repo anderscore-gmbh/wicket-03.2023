@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>Wicket Training: Cheesr - Cheese Online</title>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#" >Cheesr - Cheese Online (Musterlösung 16)</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+    <span wicket:id="mainNavigation"/>
+    
+    <span wicket:id = "feedback"/>
+    <p>
+        <i>Username and password are both "wicket"</i>
+    </p>
+
+    <form wicket:id="signInForm">
+        <dl>
+            <dt>Username:</dt>
+            <dd><input wicket:id="username" type="text" size="30"/></dd>
+            <dt>Password:</dt>
+            <dd><input wicket:id="password" type="password" size="30"/></dd>
+            <dd>
+                <input type="submit" name="submit" value="Sign In"/>
+            </dd>
+        </dl>
+    </form>
+	</div>
+	<!-- /.container -->
+</body>
+</html>
