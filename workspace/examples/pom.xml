@@ -36,7 +36,7 @@
 	</licenses>
 
 	<properties>
-		<wicket.version>9.11.0</wicket.version>
+		<wicket.version>9.12.0</wicket.version>
 		<jetty9.version>9.4.29.v20200521</jetty9.version>
 		<slf4j.version>1.7.30</slf4j.version>
 		<!--		Wicket 9 & JUnit 5-->

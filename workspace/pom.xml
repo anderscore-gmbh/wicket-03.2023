@@ -41,7 +41,7 @@
 		<!-- Wicket 8 Versions: https://github.com/apache/wicket/blob/wicket-8.x/pom.xml#L137 -->
 		<!-- Wicket 9 Versions: https://github.com/apache/wicket/blob/wicket-9.x/pom.xml#L174 -->
 		<!-- Wicket 10 Versions: https://github.com/apache/wicket/blob/80726e2dae60e5893be0621761883f2dec20cac0/pom.xml#L185 -->
-		<wicket.version>9.11.0</wicket.version>
+		<wicket.version>9.12.0</wicket.version>
 		<spring.version>4.3.30.RELEASE</spring.version>
 		<jetty9.version>9.4.29.v20200521</jetty9.version>
 		<slf4j.version>1.7.30</slf4j.version>
