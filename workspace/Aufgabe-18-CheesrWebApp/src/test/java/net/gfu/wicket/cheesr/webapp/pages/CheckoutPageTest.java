@@ -5,15 +5,15 @@ import net.gfu.wicket.cheesr.webapp.components.ShoppingCartPanel;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.util.tester.WicketTester;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class CheckoutPageTest {
 
 	private WicketTester tester;
 
-	@Before
-//	@BeforeEach
+	//@Before
+	@BeforeEach
 	public void setUp() {
 		tester = new WicketTester(new TestWicketApplication());
 		tester.startPage(Checkout.class);

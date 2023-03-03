@@ -3,16 +3,16 @@ package net.gfu.wicket.cheesr.webapp.pages;
 import net.gfu.wicket.cheesr.webapp.TestWicketApplication;
 import org.apache.wicket.util.tester.FormTester;
 import org.apache.wicket.util.tester.WicketTester;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class CheckoutFormTest {
 	
 	private WicketTester tester;
 	private FormTester formTester;
 
-	@Before
-//	@BeforeEach
+	//@Before
+	@BeforeEach
 	public void setUp() {
 		tester = new WicketTester(new TestWicketApplication());
 		tester.startPage(Index.class);
