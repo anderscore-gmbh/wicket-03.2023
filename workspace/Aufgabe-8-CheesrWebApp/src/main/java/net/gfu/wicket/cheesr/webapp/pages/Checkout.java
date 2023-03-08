@@ -3,7 +3,6 @@ package net.gfu.wicket.cheesr.webapp.pages;
 import net.gfu.wicket.backend.BOServices;
 import net.gfu.wicket.backend.bo.Address;
 import net.gfu.wicket.backend.bo.Cart;
-import org.apache.wicket.behavior.AttributeAppender;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
@@ -44,11 +43,11 @@ public class Checkout extends CheesrPage {
 //		add(new ShoppingCartPanel("cart",getCartModel()));
     }
 
-    @Override
-    protected void onInitialize() {
-        super.onInitialize();
-        // Checkout-Link soll auf der Checkout-Seite nicht angezeigt werden, da wir schon da sind.
-        getShoppingCartPanel().getCheckoutLink().add(AttributeAppender.append("class", "invisble"));
-    }
+//    @Override
+//    protected void onInitialize() {
+//        super.onInitialize();
+//        // Checkout-Link soll auf der Checkout-Seite nicht angezeigt werden, da wir schon da sind.
+//        getShoppingCartPanel().getCheckoutLink().add(AttributeAppender.append("class", "invisble"));
+//    }
 
 }
