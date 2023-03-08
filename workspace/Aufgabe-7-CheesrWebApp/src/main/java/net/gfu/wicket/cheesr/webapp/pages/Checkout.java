@@ -9,7 +9,6 @@ public class Checkout extends CheesrPage {
 	private static final long serialVersionUID = 1L;
 
 	public Checkout() {
-		add(new FeedbackPanel("feedback"));
 //		Form<Address> form = new Form<>("form");
 //		add(form);
 //		Address address = getCart().getBillingAddress();
@@ -35,6 +34,7 @@ public class Checkout extends CheesrPage {
 //				setResponsePage(Index.class);
 //			}
 //		});
+		add(new FeedbackPanel("feedback"));
 		add(new CheckoutFormPanel("checkout"));
 		add(new ShoppingCartPanel("cart",getCartModel()));
 	}

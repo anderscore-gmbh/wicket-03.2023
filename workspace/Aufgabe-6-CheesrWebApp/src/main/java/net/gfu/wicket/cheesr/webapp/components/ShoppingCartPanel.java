@@ -1,9 +1,7 @@
 package net.gfu.wicket.cheesr.webapp.components;
 
-import java.text.NumberFormat;
-import java.util.List;
-import java.util.Locale;
-
+import net.gfu.wicket.backend.bo.Cart;
+import net.gfu.wicket.backend.bo.Cheese;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
@@ -13,8 +11,9 @@ import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
 
-import net.gfu.wicket.backend.bo.Cart;
-import net.gfu.wicket.backend.bo.Cheese;
+import java.text.NumberFormat;
+import java.util.List;
+import java.util.Locale;
 
 public class ShoppingCartPanel extends Panel {
 	private static final long serialVersionUID = 1L;
@@ -24,7 +23,7 @@ public class ShoppingCartPanel extends Panel {
 		super(id);
 		this.cart = cart;
 		
-		PropertyModel<List<Cheese>> model = new PropertyModel<>(this, "cart.cheeses");
+		PropertyModel<List<Cheese>> model = new PropertyModel<>(this, "cart.cheeses"); // getCart().getCheeses()
 		add(new ListView<Cheese>("cart", model) {
 			private static final long serialVersionUID = 1L;
 			@Override

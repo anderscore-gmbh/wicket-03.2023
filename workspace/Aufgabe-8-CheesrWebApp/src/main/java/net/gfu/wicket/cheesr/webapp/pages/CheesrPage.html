@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html xmlns:wicket="http://wicket.apache.org">
 <head>
-<meta charset="utf-8" />
-<title>Wicket Training: Cheesr - Cheese Online</title>
+    <meta charset="utf-8"/>
+    <title>Wicket Training: Cheesr - Cheese Online</title>
 </head>
 <body>
 
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#" >Cheesr - Cheese Online (Musterlösung 8)</a>
-			</div>
-		</div>
-	</nav>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Cheesr - Cheese Online (Musterlösung 8)</a>
+        </div>
+    </div>
+</nav>
 
-	<div class="container">
-		<wicket:child/>
-	</div>
-	<!-- /.container -->
+<div class="container">
+    <div class="col-md-6">
+        <wicket:child/>
+    </div>
+    <div class="col-md-6">
+        <div wicket:id="cart"></div>
+    </div>
+</div>
+
+<!-- /.container -->
 </body>
 </html>

@@ -1,9 +1,8 @@
 package net.gfu.wicket.cheesr.webapp.components;
 
-import java.text.NumberFormat;
-import java.util.List;
-import java.util.Locale;
-
+import net.gfu.wicket.backend.bo.Cart;
+import net.gfu.wicket.backend.bo.Cheese;
+import net.gfu.wicket.cheesr.webapp.pages.Checkout;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
@@ -12,15 +11,19 @@ import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
+import org.apache.wicket.request.mapper.parameter.PageParameters;
 
-import net.gfu.wicket.backend.bo.Cart;
-import net.gfu.wicket.backend.bo.Cheese;
+import java.text.NumberFormat;
+import java.util.List;
+import java.util.Locale;
 
 public class ShoppingCartPanel extends Panel {
 	private static final long serialVersionUID = 1L;
 	private final IModel<Cart> cart;
+
+	Link<String> checkoutLink;
 	
-	public ShoppingCartPanel(String id, IModel<Cart> cart){
+	public ShoppingCartPanel(PageParameters parameters, String id, IModel<Cart> cart){
 		super(id);
 		this.cart = cart;
 		
@@ -52,6 +55,26 @@ public class ShoppingCartPanel extends Panel {
 				return nfs.format(getCart().getTotal());
 			}
 		}));
+
+		checkoutLink = new Link<String>("checkout") {
+			private static final long serialVersionUID = 1L;
+
+			@Override
+
+			public void onClick() {
+				setResponsePage(new Checkout());
+			}
+
+			@Override
+			public boolean isVisible() {
+				return !getCart().getCheeses().isEmpty();
+			}
+		};
+		add(checkoutLink);
+	}
+
+	public Link getCheckoutLink() {
+		return this.checkoutLink;
 	}
 
 	public Cart getCart() {

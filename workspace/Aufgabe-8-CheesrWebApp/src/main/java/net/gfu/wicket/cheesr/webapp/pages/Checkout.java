@@ -1,16 +1,14 @@
 package net.gfu.wicket.cheesr.webapp.pages;
 
+import net.gfu.wicket.backend.BOServices;
+import net.gfu.wicket.backend.bo.Address;
+import net.gfu.wicket.backend.bo.Cart;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.PropertyModel;
-
-import net.gfu.wicket.backend.BOServices;
-import net.gfu.wicket.backend.bo.Address;
-import net.gfu.wicket.backend.bo.Cart;
-import net.gfu.wicket.cheesr.webapp.components.ShoppingCartPanel;
 
 public class Checkout extends CheesrPage {
 
@@ -42,6 +40,14 @@ public class Checkout extends CheesrPage {
 				setResponsePage(Index.class);
 			}
 		});
-		add(new ShoppingCartPanel("cart",getCartModel()));
+
+//		add(new ShoppingCartPanel("cart",getCartModel()));
+	}
+
+	@Override
+	protected void onRender() {
+		super.onRender();
+		// Checkout-Link soll auf der Checkout-Seite nicht angezeigt werden, da wir schon da sind.
+		getShoppingCartPanel().getCheckoutLink().setVisible(false);
 	}
 }

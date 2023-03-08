@@ -1,5 +1,6 @@
 package net.gfu.wicket.cheesr.webapp;
 
+import net.gfu.wicket.cheesr.webapp.pages.Checkout;
 import org.apache.wicket.Session;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
@@ -28,6 +29,7 @@ public class WicketApplication extends WebApplication
 	public void init(){
 		super.init();
 
+		mountPage("/checkout", Checkout.class);
 	}
 
 	@Override
