@@ -29,15 +29,23 @@ public class EchoFormPage extends WebPage {
     private Label message;
 
     public EchoFormPage(){
-        Model<String> inputModel = new Model<>();
+        Model<String> inputModel = new Model<>("");
         TextField<String> textField = new TextField<>("echo-input", inputModel);
 
         form = new Form<>("form");
         form.add(textField);
 
         MySubmitButton submitButton = new MySubmitButton("submit-button", inputModel);
+//        Button submitButton = new Button("submit-button") {
+//            @Override
+//            public void onSubmit() {
+//                super.onSubmit();
+//                inputModel.setObject(inputModel.getObject() + " Hallo Welt von onSubmit");
+//            }
+//        };
         form.add(submitButton);
-//        form.setDefaultButton(submitButton);
+        form.remove(submitButton);
+        form.add(submitButton);
 
         message = new Label("echo-message", inputModel);
 

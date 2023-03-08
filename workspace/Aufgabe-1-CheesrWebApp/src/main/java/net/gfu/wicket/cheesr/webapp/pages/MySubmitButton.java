@@ -16,24 +16,28 @@ public class MySubmitButton extends Button {
     @Override
     protected void onInitialize() {
         super.onInitialize();
-        model.setObject("onInitialize \n" + model.getObject() + "\n");
+//        model.setObject("onInitialize \n" + model.getObject() + "\n");
+        model.setObject(model.getObject() + "\n onInitialize \n");
     }
 
     @Override
     protected void onConfigure() {
         super.onConfigure();
-        model.setObject("onConfigure \n" + model.getObject() + "\n");
+//        model.setObject("onConfigure \n" + model.getObject() + "\n");
+        model.setObject(model.getObject() + "\n onConfigure \n");
     }
 
     @Override
     protected void onRemove() {
         super.onRemove();
-        model.setObject("onRemove \n" + model.getObject() + "\n");
+//        model.setObject("onRemove \n" + model.getObject() + "\n");
+        model.setObject(model.getObject() + "\n onRemove \n");
     }
 
     @Override
     protected void onRender() {
         super.onRender();
-        model.setObject("onRender \n" + model.getObject() + "\n");
+//        model.setObject("onRender \n" + model.getObject() + "\n");
+        model.setObject(model.getObject() + "\n onRender \n");
     }
 }

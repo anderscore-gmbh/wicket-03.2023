@@ -1,9 +1,7 @@
 package net.gfu.wicket.cheesr.webapp.pages;
 
-import java.text.NumberFormat;
-import java.util.List;
-import java.util.Locale;
-
+import net.gfu.wicket.backend.bo.Cheese;
+import net.gfu.wicket.cheesr.webapp.CheeseListModel;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
@@ -12,8 +10,9 @@ import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
-import net.gfu.wicket.backend.bo.Cheese;
-import net.gfu.wicket.cheesr.webapp.CheeseListModel;
+import java.text.NumberFormat;
+import java.util.List;
+import java.util.Locale;
 
 
 public class Index extends CheesrPage {

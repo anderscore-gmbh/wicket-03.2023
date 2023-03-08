@@ -1,11 +1,9 @@
 package net.gfu.wicket.cheesr.webapp;
 
-import net.gfu.wicket.cheesr.webapp.pages.ClickCounterPage;
-import net.gfu.wicket.cheesr.webapp.pages.EchoFormPage;
+import net.gfu.wicket.cheesr.webapp.pages.Checkout;
+import net.gfu.wicket.cheesr.webapp.pages.Index;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
-
-import net.gfu.wicket.cheesr.webapp.pages.Index;
 
 /**
  * Application object for your web application.
@@ -24,6 +22,8 @@ public class WicketApplication extends WebApplication {
 	@Override
 	public void init() {
 		super.init();
+
+		mountPage("/checkout", Checkout.class);
 		// getCspSettings().blocking().disabled();
 		// add your configuration here
 	}
