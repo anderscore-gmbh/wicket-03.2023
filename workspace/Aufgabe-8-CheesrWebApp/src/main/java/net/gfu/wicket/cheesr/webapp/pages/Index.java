@@ -6,14 +6,13 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 
 public class Index extends CheesrPage {
 	private static final long serialVersionUID = 1L;
 	
-	public Index(final PageParameters parameters) {
-		super(parameters);
+	public Index() {
+		super();
 		CheeseListModel m = new CheeseListModel();
 		
 		add(new ListView<Cheese>("cheeses", m) {

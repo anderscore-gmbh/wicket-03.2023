@@ -11,7 +11,6 @@ import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 import java.text.NumberFormat;
 import java.util.List;
@@ -23,7 +22,7 @@ public class ShoppingCartPanel extends Panel {
 
 	Link<String> checkoutLink;
 	
-	public ShoppingCartPanel(PageParameters parameters, String id, IModel<Cart> cart){
+	public ShoppingCartPanel(String id, IModel<Cart> cart){
 		super(id);
 		this.cart = cart;
 		

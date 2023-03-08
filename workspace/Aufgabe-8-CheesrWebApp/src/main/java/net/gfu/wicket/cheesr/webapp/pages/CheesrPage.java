@@ -8,7 +8,6 @@ import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.head.JavaScriptHeaderItem;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.model.Model;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.request.resource.CssResourceReference;
 import org.apache.wicket.request.resource.JavaScriptResourceReference;
 
@@ -28,8 +27,8 @@ public class CheesrPage extends WebPage {
         response.render(JavaScriptHeaderItem.forReference(new JavaScriptResourceReference(Index.class, "../assets/popper.min.js")));
     }
 
-    public CheesrPage(PageParameters parameters) {
-        add(shoppingCartPanel = new ShoppingCartPanel(parameters,"cart", getCartModel()));
+    public CheesrPage() {
+        add(shoppingCartPanel = new ShoppingCartPanel("cart", getCartModel()));
     }
 
     public ShoppingCartPanel getShoppingCartPanel() {
